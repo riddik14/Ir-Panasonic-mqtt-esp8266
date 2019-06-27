@@ -1,4 +1,4 @@
-/*progetto creato das Domenico Ceccarelli - Italia
+/*progetto creato da Domenico Ceccarelli - Italia
 offritemi un caffe
 
 progetto testato su un condizionatore PANASONIC
