@@ -5,4 +5,4 @@ Controlla il tuo condizionatore panasonic con  mqtt e esp8266
 <img src="https://github.com/riddik14/Ir-Panasonic-mqtt-esp8266/blob/master/Immagine.png">
 offrimi un caffe https://www.paypal.me/DomenicoCeccarelli
 
-Click <a href="https://www.paypal.me/DomenicoCeccarelli">here</a> to go to yahoo.
+Affrimi un caffè <a href="https://www.paypal.me/DomenicoCeccarelli"></a> .
