@@ -24,6 +24,8 @@ https://www.paypal.me/DomenicoCeccarelli
 #define mqtt_user "tuausernamemqtt"           //username
 #define mqtt_pass "tuapasswordmqtt"         //password
 #define mqtt_client "IRremote"      //nome client esp8266
+#define mqtt_topic "ha/ac_panasonic" //inserisci il topic
+
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -50,7 +52,10 @@ void setup() {
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
-  Serial.print("Invio il primo comando di spegnimento del condizionatore");
+    Serial.println();
+      Serial.println("**********************************************************************************************************");
+
+  Serial.println("Invio il primo comando di spegnimento del condizionatore");
   printState_init();  
   ac.begin();
 }
@@ -61,4 +66,3 @@ void loop() {
   }
   client.loop();
 }
-
