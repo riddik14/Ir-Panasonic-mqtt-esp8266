@@ -32,7 +32,7 @@ void printState() {
 }
 void printState_init() {
   // Display the settings.
-  Serial.println("Panasonic A/C remote:");
+  Serial.println("Invio il primo comando di spegnimento al condizionatore");
   Serial.printf("  %s\n", ac.toString().c_str());
   // Display the encoded IR sequence.
   unsigned char* ir_code = ac.getRaw();
