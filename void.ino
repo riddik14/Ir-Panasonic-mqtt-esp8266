@@ -16,8 +16,8 @@ void setup_wifi() {
 
   Serial.println("");
   Serial.println("WiFi connesso!");
-  Serial.println("Indirizzo IP ricevuto: ");
-  Serial.println(WiFi.localIP());
+  Serial.print("Indirizzo IP ricevuto: ");
+  Serial.print(WiFi.localIP());
 }
 void printState() {
   // Display the settings.
@@ -44,7 +44,7 @@ void printState_init() {
 void callback(char* topic, byte* payload, unsigned int length) {
   payload[length] = '\0';
   strTopic = String((char*)topic);
-  if (strTopic == "ha/ac_panasonic")
+  if (strTopic == mqtt_topic)
   {
     ac_panasonic = String((char*)payload);
 
@@ -95,16 +95,20 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 void reconnect() {
   while (!client.connected()) {
-    Serial.print("Mi connetto al server MQTT:");
+    Serial.print("Mi connetto al server MQTT: ");
     Serial.print(mqtt_client);
     // Attempt to connect
     if (client.connect(mqtt_client, mqtt_user, mqtt_pass)) {
+    Serial.println();
+      Serial.println();
       Serial.println("CONNESSO");
       client.subscribe("ha/#");
     } else {
       Serial.print("ERRORE, rc=");
       Serial.print(client.state());
-      Serial.println(" riprovo tra 5 secondi");
+          Serial.println();
+      Serial.println();
+      Serial.println("riprovo tra 5 secondi");
       delay(5000);
     }
   }
