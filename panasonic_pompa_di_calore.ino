@@ -15,14 +15,14 @@ https://www.paypal.me/DomenicoCeccarelli
 
 
 //wlan setup DHCP ON
-#define ssid "tuaretewifi"
-#define password "tuapasswordwifi"
+#define ssid "wlan2"
+#define password "mimmoelisabettalucia"
 
 //impostazioni mqtt
 #define mqtt_server "192.168.1.247" //server
 #define mqtt_port 1883              //porta
-#define mqtt_user "tuausernamemqtt"           //username
-#define mqtt_pass "tuapasswordmqtt"         //password
+#define mqtt_user "admin"           //username
+#define mqtt_pass "mimmo14"         //password
 #define mqtt_client "IRremote"      //nome client esp8266
 #define mqtt_topic "ha/ac_panasonic" //inserisci il topic
 
@@ -55,8 +55,8 @@ void setup() {
     Serial.println();
       Serial.println("**********************************************************************************************************");
 
-  Serial.println("Invio il primo comando di spegnimento del condizionatore");
-  printState_init();  
+  //Serial.println("Invio il primo comando di spegnimento del condizionatore");
+  //printState_init();  
   ac.begin();
 }
 
@@ -66,3 +66,4 @@ void loop() {
   }
   client.loop();
 }
+
