@@ -15,14 +15,14 @@ https://www.paypal.me/DomenicoCeccarelli
 
 
 //wlan setup DHCP ON
-#define ssid "wlan2"
-#define password "mimmoelisabettalucia"
+#define ssid "tuaretewifi"
+#define password "tuapasswordwifi"
 
 //impostazioni mqtt
-#define mqtt_server "" //server
+#define mqtt_server "192.168.1.247" //server
 #define mqtt_port 1883              //porta
-#define mqtt_user ""           //username
-#define mqtt_pass ""         //password
+#define mqtt_user "tuausernamemqtt"           //username
+#define mqtt_pass "tuapasswordmqtt"         //password
 #define mqtt_client "IRremote"      //nome client esp8266
 
 WiFiClient espClient;
@@ -50,15 +50,15 @@ void setup() {
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
-  Serial.println("invio il primo comando di spegnimento del condizionatore");
+  Serial.print("Invio il primo comando di spegnimento del condizionatore");
   printState_init();  
   ac.begin();
 }
 
 void loop() {
-  if (!client.connected()) 
-  {
+  if (!client.connected()) {
     reconnect();
   }
   client.loop();
 }
+
