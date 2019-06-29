@@ -16,7 +16,7 @@ Materiale occorrente:
 
 
 wemos D1 mini o qualsiasi ESP8266
-<img src="https://ae01.alicdn.com/kf/HTB16O8flborBKNjSZFjq6A_SpXaf/WEMOS-D1-mini-Lite-V1-0-0-WIFI-Internet-of-Things-development-board-based-ESP8285-1MB.jpg_640x640.jpg"><a href="https://www.aliexpress.com/item/32845061455.html?spm=2114.search0204.3.68.67ab4f8dzGfmZz&ws_ab_test=searchweb0_0%2Csearchweb201602_3_10065_10068_319_317_10696_10084_453_10083_454_10618_10304_10307_10820_10821_537_10302_536_10843_10059_10884_10887_321_322_10103%2Csearchweb201603_60%2CppcSwitch_0&algo_expid=1f10874f-5b2e-4e0b-967b-45e419be5670-9&algo_pvid=1f10874f-5b2e-4e0b-967b-45e419be5670&transAbTest=ae803_4">link aliexpress</a>
+<img src="https://images-na.ssl-images-amazon.com/images/I/71Q2T%2B9myRL._SL1000_.jpg"><a href="https://www.aliexpress.com/item/32845061455.html?spm=2114.search0204.3.68.67ab4f8dzGfmZz&ws_ab_test=searchweb0_0%2Csearchweb201602_3_10065_10068_319_317_10696_10084_453_10083_454_10618_10304_10307_10820_10821_537_10302_536_10843_10059_10884_10887_321_322_10103%2Csearchweb201603_60%2CppcSwitch_0&algo_expid=1f10874f-5b2e-4e0b-967b-45e419be5670-9&algo_pvid=1f10874f-5b2e-4e0b-967b-45e419be5670&transAbTest=ae803_4">link aliexpress</a>
 
 Module IR TX
 <img src="https://ae01.alicdn.com/kf/HTB1mXCbKXXXXXc7XVXXq6xXFXXXQ/Infrared-Emitter-IR-Transmitter-38KHz-940nm-IR-Emitter-Module-for-Arduino.jpg_640x640.jpg"><a href="https://www.aliexpress.com/item/1922513322.html">link aliexpress</a>
