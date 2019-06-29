@@ -65,3 +65,31 @@ connettere il module IRTX al wemosD1mini
 - arduino IDE con la configurazione dei moduli ESP8266 e le librerie allegate.
 - cambiare i parametri relativi a wifi password mqtt server username e password
 - connettere il PIN D3 con GND del wemos, premere reset o collegarlo alla usb del pc e caricare il firmware
+
+PS tutte le modalità sono con le seguenti configurazioni
+swingH: AUTO
+swingV: AUTO
+Velocità ventola: AUTO
+
+le funzioni comandabili da MQTT
+
+topic_mqtt: ha/ac_panasonic
+
+playload:
+
+ONcold
+OFFcold
+
+ONhot
+OFFhot
+
+ONdry
+OFFdry
+
+ONauto
+OFFauto
+
+
+
+_____________________________________________________________-
+
