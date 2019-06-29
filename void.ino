@@ -3,7 +3,7 @@ void setup_wifi() {
   delay(10);
 
   Serial.println();
-  Serial.print("Connecting to ");
+  Serial.print("mi connetto alla rete wifi:  ");
   Serial.println(ssid);
 
   WiFi.begin(ssid, password);
@@ -15,11 +15,32 @@ void setup_wifi() {
   }
 
   Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
+  Serial.println("WiFi connesso!");
+  Serial.println("Indirizzo IP ricevuto: ");
   Serial.println(WiFi.localIP());
 }
-
+void printState() {
+  // Display the settings.
+  Serial.println("Panasonic A/C remote:");
+  Serial.printf("  %s\n", ac.toString().c_str());
+  // Display the encoded IR sequence.
+  unsigned char* ir_code = ac.getRaw();
+  Serial.print("Codice IR inviato: 0x");
+  for (uint8_t i = 0; i < kPanasonicAcStateLength; i++)
+    Serial.printf("%02X", ir_code[i]);
+  Serial.println();
+}
+void printState_init() {
+  // Display the settings.
+  Serial.println("Panasonic A/C remote:");
+  Serial.printf("  %s\n", ac.toString().c_str());
+  // Display the encoded IR sequence.
+  unsigned char* ir_code = ac.getRaw();
+  Serial.print("Codice IR inviato: 0x");
+  for (uint8_t i = 0; i < kPanasonicAcStateLength; i++)
+    Serial.printf("%02X", ir_code[i]);
+  Serial.println();
+}
 void callback(char* topic, byte* payload, unsigned int length) {
   payload[length] = '\0';
   strTopic = String((char*)topic);
@@ -73,19 +94,17 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 
 void reconnect() {
-  // Loop until we're reconnected
   while (!client.connected()) {
-    Serial.print("Attempting MQTT connection...");
+    Serial.print("Mi connetto al server MQTT:");
+    Serial.print(mqtt_client);
     // Attempt to connect
     if (client.connect(mqtt_client, mqtt_user, mqtt_pass)) {
-      Serial.println("connected");
-      // Once connected, publish an announcement...
+      Serial.println("CONNESSO");
       client.subscribe("ha/#");
     } else {
-      Serial.print("failed, rc=");
+      Serial.print("ERRORE, rc=");
       Serial.print(client.state());
-      Serial.println(" try again in 5 seconds");
-      // Wait 5 seconds before retrying
+      Serial.println(" riprovo tra 5 secondi");
       delay(5000);
     }
   }
