@@ -19,10 +19,10 @@ https://www.paypal.me/DomenicoCeccarelli
 #define password "mimmoelisabettalucia"
 
 //impostazioni mqtt
-#define mqtt_server "192.168.1.247" //server
+#define mqtt_server "" //server
 #define mqtt_port 1883              //porta
-#define mqtt_user "admin"           //username
-#define mqtt_pass "mimmo14"         //password
+#define mqtt_user ""           //username
+#define mqtt_pass ""         //password
 #define mqtt_client "IRremote"      //nome client esp8266
 
 WiFiClient espClient;
