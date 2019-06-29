@@ -1,146 +1,136 @@
 void ac_on_cold (){
 {
-  Serial.println("invio il comando on cold  A/C.");
   ac.setModel(kPanasonicRkr);
   ac.on();
   ac.setFan(kPanasonicAcFanAuto);
   ac.setMode(kPanasonicAcCool);
   ac.setTemp(23);
   ac.setSwingVertical(kPanasonicAcSwingVAuto);
-  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);
-  
-  
+  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);  
   }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio il codice power-on... mode freddo...");
+  Serial.println(" power-on... mode freddo... ventola AUTO... swing verticale AUTO... swing orizzontale AUTO...");
   ac.send();
   #endif  
   printState();
+    Serial.println("invio effettuato");
   }
 void ac_off_cold (){
 {
-  Serial.println("invio il comando off cold  A/C.");
   ac.setModel(kPanasonicRkr);
   ac.off();
   ac.setFan(kPanasonicAcFanAuto);
   ac.setMode(kPanasonicAcCool);
   ac.setTemp(23);
   ac.setSwingVertical(kPanasonicAcSwingVAuto);
-  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);
-  
-  
+  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);  
   }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio il codice power-off... mode freddo...");
+  Serial.println(" power-off... mode freddo... ventola AUTO... swing verticale AUTO... swing orizzontale AUTO...");
   ac.send();
   #endif  
   printState();
+    Serial.println("invio effettuato");
   }
 void ac_on_hot (){
   {
-  Serial.println("invio il comando heat on   A/C.");
   ac.setModel(kPanasonicRkr);
   ac.on();
   ac.setFan(kPanasonicAcFanAuto);
   ac.setMode(kPanasonicAcHeat);
   ac.setTemp(23);
   ac.setSwingVertical(kPanasonicAcSwingVAuto);
-  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);
-  
+  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);  
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio il codice power-on... mode caldo...");
+  Serial.println(" power-on... mode caldo... ventola AUTO... swing verticale AUTO... swing orizzontale AUTO...");
   ac.send();
   #endif 
   printState();
+    Serial.println("invio effettuato");
   }
 void ac_off_hot (){
   {
-  Serial.println("invio il comando hot off   A/C.");
   ac.setModel(kPanasonicRkr);
   ac.off();
   ac.setFan(kPanasonicAcFanAuto);
   ac.setMode(kPanasonicAcHeat);
   ac.setTemp(23);
   ac.setSwingVertical(kPanasonicAcSwingVAuto);
-  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);
-  
+  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);  
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio il codice power-ff... mode caldo...");
+  Serial.println(" power-off... mode caldo... ventola AUTO... swing verticale AUTO... swing orizzontale AUTO...");
   ac.send();
   #endif 
   printState();
+    Serial.println("invio effettuato");
   }
 void ac_off_dry (){
   {
-  Serial.println("invio il comando dry off   A/C.");
   ac.setModel(kPanasonicRkr);
   ac.off();
   ac.setFan(kPanasonicAcFanAuto);
   ac.setMode(kPanasonicAcDry);
   ac.setTemp(23);
   ac.setSwingVertical(kPanasonicAcSwingVAuto);
-  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);
-  
+  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);  
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio il codice power-off... mode deumidificatore...");
+  Serial.println(" power-off... mode deumidificatore... ventola AUTO... swing verticale AUTO... swing orizzontale AUTO...");
   ac.send();
   #endif 
   printState();
+    Serial.println("invio effettuato");
   }
 void ac_on_dry (){
   {
-  Serial.println("invio il comando dry on   A/C.");
   ac.setModel(kPanasonicRkr);
   ac.on();
   ac.setFan(kPanasonicAcFanAuto);
   ac.setMode(kPanasonicAcDry);
   ac.setTemp(23);
   ac.setSwingVertical(kPanasonicAcSwingVAuto);
-  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);
-  
+  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);  
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio il codice power-on... mode deumidificatore...");
+  Serial.println(" power-on... mode deumidificatore... ventola AUTO... swing verticale AUTO... swing orizzontale AUTO...");
   ac.send();
   #endif 
   printState();
+    Serial.println("invio effettuato");
   }
 void ac_off_auto (){
   {
-  Serial.println("invio il comando auto on   A/C.");
   ac.setModel(kPanasonicRkr);
   ac.off();
   ac.setFan(kPanasonicAcFanAuto);
   ac.setMode(kPanasonicAcAuto);
   ac.setTemp(23);
   ac.setSwingVertical(kPanasonicAcSwingVAuto);
-  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);
-  
+  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);  
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio il codice power-off... mode auto...");
+  Serial.println(" power-off... mode AUTO... ventola AUTO... swing verticale AUTO... swing orizzontale AUTO...");
   ac.send();
   #endif 
   printState();
+    Serial.println("invio effettuato");
   }
 void ac_on_auto (){
   {
-  Serial.println("invio il comando auto off   A/C.");
   ac.setModel(kPanasonicRkr);
   ac.on();
   ac.setFan(kPanasonicAcFanAuto);
   ac.setMode(kPanasonicAcAuto);
   ac.setTemp(23);
   ac.setSwingVertical(kPanasonicAcSwingVAuto);
-  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);
-  
+  ac.setSwingHorizontal(kPanasonicAcSwingHAuto);  
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio il codice power-on... mode auto...");
+  Serial.println(" power-on... mode AUTO... ventola AUTO... swing verticale AUTO... swing orizzontale AUTO...");
   ac.send();
   #endif 
   printState();
+    Serial.println("invio effettuato");
   }
