@@ -12,7 +12,7 @@ void ac_on_cold (){
   
   }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio on cold  a A/C ...");
+  Serial.println("Invio il codice power-on... mode freddo...");
   ac.send();
   #endif  
   printState();
@@ -31,7 +31,7 @@ void ac_off_cold (){
   
   }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio off cold  a A/C ...");
+  Serial.println("Invio il codice power-off... mode freddo...");
   ac.send();
   #endif  
   printState();
@@ -49,7 +49,7 @@ void ac_on_hot (){
   
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio on heat  a A/C ...");
+  Serial.println("Invio il codice power-on... mode caldo...");
   ac.send();
   #endif 
   printState();
@@ -67,7 +67,7 @@ void ac_off_hot (){
   
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio on heat  a A/C ...");
+  Serial.println("Invio il codice power-ff... mode caldo...");
   ac.send();
   #endif 
   printState();
@@ -85,7 +85,7 @@ void ac_off_dry (){
   
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio on heat  a A/C ...");
+  Serial.println("Invio il codice power-off... mode deumidificatore...");
   ac.send();
   #endif 
   printState();
@@ -103,7 +103,7 @@ void ac_on_dry (){
   
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio on heat  a A/C ...");
+  Serial.println("Invio il codice power-on... mode deumidificatore...");
   ac.send();
   #endif 
   printState();
@@ -121,7 +121,7 @@ void ac_off_auto (){
   
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio on heat  a A/C ...");
+  Serial.println("Invio il codice power-off... mode auto...");
   ac.send();
   #endif 
   printState();
@@ -139,7 +139,7 @@ void ac_on_auto (){
   
    }
   #if SEND_PANASONIC_AC
-  Serial.println("Invio on auto_off  a A/C ...");
+  Serial.println("Invio il codice power-on... mode auto...");
   ac.send();
   #endif 
   printState();
