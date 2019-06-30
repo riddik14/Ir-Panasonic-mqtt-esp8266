@@ -14,7 +14,7 @@ climate:
       - 'off'
     mode_command_topic: "ha/ac_panasonic"
     mode_command_template: >-
-      {% set values = { 'auto':'ONauto', 'heat':'ONhot',  'cool':'ONcold', 'dry':'ONdry', 'off':'OFFcold'} %}
+      {% set values = { 'auto':'ONauto', 'heat':'ONhot',  'cool':'ONcool', 'dry':'ONdry', 'off':'OFFcool'} %}
       {{ values[value] if value in values.keys() else '4' }}
     current_temperature_topic: "ha/ac_panasonic/temperature"
     min_temp: 17
