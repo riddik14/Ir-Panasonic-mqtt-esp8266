@@ -95,7 +95,7 @@ Configurazione hassio
 
 copiare i file dentro my_mqtt.zip in \config\custom_components della cartella configurazione di hassio
 
-aggiungere nel configuration.yaml il contenuto del file
+aggiungere nel configuration.yaml il contenuto del file conf home assistant hassio
 
 
 
