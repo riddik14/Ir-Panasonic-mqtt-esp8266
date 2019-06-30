@@ -1,4 +1,4 @@
-void ac_on_cold () {
+void ac_on_cool () {
   {
     ac.setModel(kPanasonicRkr);
     ac.on();
@@ -15,7 +15,7 @@ void ac_on_cold () {
   printState();
   Serial.println("invio effettuato");
 }
-void ac_off_cold () {
+void ac_off_cool () {
   {
     ac.setModel(kPanasonicRkr);
     ac.off();
