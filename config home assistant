@@ -10,14 +10,26 @@ climate:
     cold_tolerance: 0.3
     #hot_tolerance: 0
     min_cycle_duration:
-      seconds: 30
-    keep_alive:
-      minutes: 2
+      seconds: 300
     initial_operation_mode: "off"
     away_temp: 25
-    precision: 0.1
+    precision: 0.3
+- platform: generic_thermostat
+    name: Pompa_di_calore
+    heater: switch.pompadicalore
+    target_sensor: sensor.sensore_temp_da _abbinare
+    min_temp: 16
+    max_temp: 30
+    ac_mode: False
+    target_temp: 22
+    hot_tolerance: 0
+    min_cycle_duration:
+      seconds: 300
+    initial_operation_mode: "off"
+    away_temp: 15
+    precision: 0.3
 switch:
-  - platform: mqtt     #clima
+  - platform: mqtt     #clima freddo
     name: "condizionatore"
     command_topic: "ha/ac_panasonic"
     qos: 0
@@ -25,10 +37,23 @@ switch:
     payload_off: "OFFcold" #OFFdry, OFFauto
     optimistic: false
     retain: false
+  - platform: mqtt     #clima caldo
+    name: "pompadicalore"
+    command_topic: "ha/ac_panasonic"
+    qos: 0
+    payload_on: "ONhot" #ONauto
+    payload_off: "OFFhot" #OFFauto
+    optimistic: false
+    retain: false
     
 #lovelace config manuale scheda
 
 entity: climate.climatizzatore
 name: clima
+theme: Backend-selected
+type: thermostat
+
+entity: climate.pompadicalore
+name: pompa di calore
 theme: Backend-selected
 type: thermostat
