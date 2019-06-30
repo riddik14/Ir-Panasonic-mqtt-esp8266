@@ -95,30 +95,10 @@ Configurazione hassio
 
 copiare i file dentro my_mqtt.zip in \config\custom_components della cartella configurazione di hassio
 
-aggiungere nel configuration.yaml
+aggiungere nel configuration.yaml il contenuto del file
 
 
-climate:
-  - platform: my_mqtt
-    name: "Thermostat"
-    #optimistic: false
-    retain: false
-    qos: 0
-    payload_on: 1
-    payload_off: 0
-    modes:
-      - auto
-      - heat
-      - cool
-      - dry
-      - 'off'
-    mode_command_topic: "ha/ac_panasonic"
-    mode_command_template: >-
-      {% set values = { 'auto':'ONauto', 'heat':'ONhot',  'cool':'ONcold', 'dry':'ONdry', 'off':'OFFcold'} %}
-      {{ values[value] if value in values.keys() else '4' }}
-    current_temperature_topic: "ha/ac_panasonic/temperature"
-    min_temp: 17
-    max_temp: 30
+
 
 
 _____________________________________________________________-
