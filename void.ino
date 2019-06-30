@@ -49,14 +49,14 @@ void callback(char* topic, byte* payload, unsigned int length) {
     ac_panasonic = String((char*)payload);
 
 
-    if (ac_panasonic == "ONcold")
+    if (ac_panasonic == "ONcool")
     {
-      Serial.println("ON_cold");
+      Serial.println("ON_cool");
       ac_on_cold ();
     }
-    if (ac_panasonic == "OFFcold")
+    if (ac_panasonic == "OFFcool")
     {
-      Serial.println("OFF_cold");
+      Serial.println("OFF_cool");
       ac_off_cold ();
     }
     if (ac_panasonic == "ONhot")
