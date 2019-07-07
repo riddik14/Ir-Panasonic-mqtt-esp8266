@@ -91,6 +91,18 @@ OFFdry
 ONauto
 OFFauto
 
+in alternativa per cambioare modalita e temperatura è possibile via mqtt inviando il seguente playload:
+-
+-  on_auto_Mode_temp_auto_auto    
+- esempio 
+- on_auto_Heat_24_auto_auto
+- on_auto_Cool_21_auto_auto
+
+- per il comando off puo essere usato qualsiasi codice basta che è presente il comando off
+- esempio off_auto_Cool_21_auto_auto
+
+
+
 Configurazione hassio
 
 copiare i file dentro my_mqtt.zip in \config\custom_components della cartella configurazione di hassio
