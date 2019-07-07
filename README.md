@@ -103,6 +103,7 @@ in alternativa per cambiare modalita e temperatura è possibile via mqtt inviand
 
 
 
+
 Configurazione hassio
 
 copiare i file dentro my_mqtt.zip in \config\custom_components della cartella configurazione di hassio
