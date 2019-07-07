@@ -91,12 +91,12 @@ OFFdry
 ONauto
 OFFauto
 
-in alternativa per cambioare modalita e temperatura è possibile via mqtt inviando il seguente playload:
+in alternativa per cambiare modalita e temperatura è possibile via mqtt inviando al topic ha/ac_panasonic il seguente playload:
 -
--  on_auto_Mode_temp_auto_auto    
+-                      on_auto_Mode_temp_auto_auto    
 - esempio 
-- on_auto_Heat_24_auto_auto
-- on_auto_Cool_21_auto_auto
+-                      on_auto_Heat_24_auto_auto
+-                      on_auto_Cool_21_auto_auto
 
 - per il comando off puo essere usato qualsiasi codice basta che è presente il comando off
 - esempio off_auto_Cool_21_auto_auto
