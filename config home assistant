@@ -1,3 +1,7 @@
+##configuration.yaml
+
+smartir:
+  update_branch: rc
 climate:
   - platform: smartir
     name: clima
