@@ -79,17 +79,7 @@ topic_mqtt: ha/ac_panasonic
 
 playload:
 
-ONcold
-OFFcold
 
-ONhot
-OFFhot
-
-ONdry
-OFFdry
-
-ONauto
-OFFauto
 
 in alternativa per cambiare modalita e temperatura è possibile via mqtt inviando al topic ha/ac_panasonic il seguente playload:
 -
@@ -106,7 +96,10 @@ in alternativa per cambiare modalita e temperatura è possibile via mqtt inviand
 
 Configurazione hassio
 
-copiare i file dentro my_mqtt.zip in \config\custom_components della cartella configurazione di hassio
+copiare la cartella smartir dentro hassio_custom_component.zip nella cartella custom_component di hassio o home assistant
+config|
+              custom_component|
+                               smartir
 
 aggiungere nel configuration.yaml il contenuto del file conf home assistant hassio
 
