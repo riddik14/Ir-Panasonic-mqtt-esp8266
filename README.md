@@ -19,7 +19,8 @@ librerie usate
 <a href="https://github.com/knolleary/pubsubclient">libreria mqtt</a>
 -
 -
-basato su questo progetto<a href="https://community.home-assistant.io/t/enhanced-version-of-mqtt-hvac-climate-platform-with-proper-history-chart/75304"> qui per la parte hassio</a>
+basato su questi progetti<a href="https://community.home-assistant.io/t/enhanced-version-of-mqtt-hvac-climate-platform-with-proper-history-chart/75304"> qui per la parte hassio</a> e <a href="https://github.com/smartHomeHub/SmartIR"> qui per smartir</a>
+-
 -
 -
 -
