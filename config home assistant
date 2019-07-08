@@ -1,24 +1,12 @@
 climate:
-  - platform: my_mqtt
-    name: "Clima"
-    #optimistic: false
-    retain: false
-    qos: 0
-    payload_on: 1
-    payload_off: 0
-    modes:
-      - auto
-      - heat
-      - cool
-      - dry
-      - 'off'
-    mode_command_topic: "ha/ac_panasonic"
-    mode_command_template: >-
-      {% set values = { 'auto':'ONauto', 'heat':'ONhot',  'cool':'ONcool', 'dry':'ONdry', 'off':'OFFcool'} %}
-      {{ values[value] if value in values.keys() else '4' }}
-    current_temperature_topic: "ha/ac_panasonic/temperature"
-    min_temp: 17
-    max_temp: 30
+  - platform: smartir
+    name: clima
+    unique_id: casa_ac
+    device_code: 1001
+    controller_data: ha/ac_panasonic
+    temperature_sensor: sensor.temp_irclima
+    humidity_sensor: sensor.hum_irclima
+    #power_sensor: binary_sensor.ac_power
 
 
 
