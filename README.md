@@ -104,6 +104,8 @@ config|
 
 aggiungere nel configuration.yaml il contenuto del file conf home assistant hassio
 
+il file 1001.json contiene i codici per il cuctom component da copiare in \config\custom_components\smartir\codes o \homeassistant\custom_components\smartir\codes
+
 
 
 
