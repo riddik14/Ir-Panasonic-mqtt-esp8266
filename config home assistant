@@ -6,7 +6,7 @@ climate:
   - platform: smartir
     name: clima
     unique_id: casa_ac
-    device_code: 1001
+    device_code: 1001 #//riferito al file \config\custom_components\smartir\codes\1001.json 
     controller_data: ha/ac_panasonic
     temperature_sensor: sensor.temp_irclima
     humidity_sensor: sensor.hum_irclima
