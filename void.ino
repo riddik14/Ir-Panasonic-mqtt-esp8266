@@ -50,15 +50,15 @@ void reconnect() {
     if (client.connect(mqtt_client, mqtt_user, mqtt_pass)) {
     Serial.println();
       Serial.println();
-      Serial.println("CONNESSO");
+      Serial.println(" CONNESSO");
       client.subscribe("ha/#");
     } else {
-      Serial.print("ERRORE, rc=");
+      Serial.print(" ERRORE, rc=");
       Serial.print(client.state());
           Serial.println();
       Serial.println();
-      Serial.println("riprovo tra 5 secondi");
-      delay(5000);
+      Serial.println("mqtt non connesso - riprovo tra 3 secondi");
+      delay(3000);
     }
   }
 }
